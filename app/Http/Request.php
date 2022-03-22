@@ -4,6 +4,12 @@ namespace App\Http;
 class Request{
 
     /**
+     * Instância do Router
+     * @var Router
+     */
+    private $router;
+
+    /**
     * Método HTTP da requisição
     * @var string
     */
@@ -33,19 +39,42 @@ class Request{
     */
     private $headers = [];
 
-    public function __construct(){
+    public function __construct($router)
+    {
+        $this->router = $router;
         $this->queryParams = $_GET ?? [];
         $this->postVars    = $_POST ?? [];
         $this->headers     = getallheaders();
         $this->httpMethod  = $_SERVER['REQUEST_METHOD'] ?? '';
-        $this->uri         = $_SERVER['REQUEST_URI'] ?? '';
+        $this->setUri();
+    }
+
+    /**
+     * Método Responsável por definir a URI
+     */
+    public function setUri()
+    {
+        $this->uri = $_SERVER['REQUEST_URI'] ?? '';
+
+        $xURI = explode('?', $this->uri);
+        $this->uri = $xURI[0];
+    }
+
+    /**
+     * Método responsável por retornar a instâcia Router
+     * @return Router
+     */
+    public function getRouter()
+    {
+        return $this->router;
     }
 
     /**
      * Método responsável por retornar o método HTTP da requisição
      * @return string
      */
-    public function gethttpMethod(){
+    public function gethttpMethod()
+    {
         return $this->httpMethod;
     }
 
@@ -53,7 +82,8 @@ class Request{
      * Método responsável por retornar a URI da requisição
      * @return string
      */
-    public function getUri(){
+    public function getUri()
+    {
         return $this->uri;
     }
 
@@ -61,7 +91,8 @@ class Request{
      * Método responsável por retornar os headers da requisição
      * @return array
      */
-    public function getHeaders(){
+    public function getHeaders()
+    {
         return $this->headers;
     }
 
@@ -69,7 +100,8 @@ class Request{
      * Método responsável por retornar os parâmetros da URL da requisição
      * @return array
      */
-    public function getQueryParams(){
+    public function getQueryParams()
+    {
         return $this->queryParams;
     }
 
@@ -77,7 +109,8 @@ class Request{
      * Método responsável por retornar as variáveis POST da requisição
      * @return array
      */
-    public function getPostVars(){
+    public function getPostVars()
+    {
         return $this->postVars;
     }
 }

@@ -1,16 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/includes/app.php';
 
 use App\Http\Router;
-use App\Utils\View;
-
-define('URL','http://localhost/wdev/mvc');
-
-// Definie o valor padrão das variáveis
-View::init([
-    'URL' => URL
-]);
 
 // Inicia o Router
 $obRouter = new Router(URL);
@@ -18,5 +13,5 @@ $obRouter = new Router(URL);
 // Inclui as Rotas de páginas
 include __DIR__.'/routes/pages.php';
 
-// Imprime o response da rota 
+// Imprime o response da rota
 $obRouter->run()->sendResponse();

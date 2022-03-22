@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Organization{
+class Organization
+{
 
     /**
     * ID da organização
