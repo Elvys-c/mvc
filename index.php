@@ -13,5 +13,8 @@ $obRouter = new Router(URL);
 // Inclui as Rotas de páginas
 include __DIR__.'/routes/pages.php';
 
+// Inclui as Rotas do painel
+include __DIR__.'/routes/admin.php';
+
 // Imprime o response da rota
 $obRouter->run()->sendResponse();
