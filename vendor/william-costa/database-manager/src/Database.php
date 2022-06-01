@@ -132,9 +132,18 @@ class Database{
    */
   public function select($where = null, $order = null, $limit = null, $fields = '*'){
     //DADOS DA QUERY
-    $where = strlen($where) ? 'WHERE '.$where : '';
-    $order = strlen($order) ? 'ORDER BY '.$order : '';
-    $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+    // $where = strlen($where) ? 'WHERE '.$where : '';
+    // $order = strlen($order) ? 'ORDER BY '.$order : '';
+    // $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+
+    // if(empty($where)){ $where = ''; }else{ $where = 'WHERE '.$where; }
+    // if(empty($order)){ $order = ''; }else{ $order = 'ORDER BY '.$order; }
+    // if(empty($limit)){ $limit = ''; }else{ $limit = 'LIMIT '.$limit; }
+
+    $where = !is_null($where) ? 'WHERE '.$where : '';
+    $order = !is_null($order) ? 'ORDER BY '.$order : '';
+    $limit = !is_null($limit) ? 'LIMIT '.$limit : '';
+
 
     //MONTA A QUERY
     $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;

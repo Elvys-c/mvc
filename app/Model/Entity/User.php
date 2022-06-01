@@ -35,7 +35,7 @@ class User
      * @param  string $email
      * @return User
      */
-    public function getUserbyEmail($email)
+    public static function getUserbyEmail($email)
     {
         return (new Database('usuarios'))->select('email = "'.$email.'"')->fetchObject(self::class);
     }

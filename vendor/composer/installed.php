@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '57d0230dc9e89560afdb6a54279b26441ad48947',
+        'reference' => 'edec33dd22e8d977260b59e5f6a7b0f3454273b0',
         'name' => 'wdev/mvc',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '57d0230dc9e89560afdb6a54279b26441ad48947',
+            'reference' => 'edec33dd22e8d977260b59e5f6a7b0f3454273b0',
             'dev_requirement' => false,
         ),
         'william-costa/database-manager' => array(

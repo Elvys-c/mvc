@@ -38,6 +38,7 @@ class Testimony extends Page{
 
         return $items;
     }
+
     /**
     * Método responsavel por retornar o conteúdo (view) de depoimentos
     * @param Request $request

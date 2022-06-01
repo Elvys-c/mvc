@@ -1,33 +1,9 @@
 <?php
+// Inclui as rotas de Home
+include __DIR__.'/admin/home.php';
 
-use \App\Http\Response;
-use \App\Controller\Admin;
+// Inclui as rotas de Login
+include __DIR__.'/admin/login.php';
 
-// Rota Admin
-$obRouter->get('/admin', [
-        'middlewares' => ['required-admin-login'],
-    function(){
-        return new Response(200, 'Admin :)');
-}]);
-
-// Rota Login
-$obRouter->get('/admin/login', [
-    'middlewares' => ['required-admin-logout'],
-    function($request){
-        return new Response(200, Admin\Login::getLogin($request));
-}]);
-
-// Rota Login (POST)
-$obRouter->post('/admin/login', [
-        'middlewares' => ['required-admin-logout'],
-    function($request){
-        return new Response(200, Admin\Login::setLogin($request));
-}]);
-
-
-// Rota Logout
-$obRouter->get('/admin/logout', [
-        'middlewares' => ['required-admin-login'],
-    function($request){
-        return new Response(200, Admin\Login::setLogout($request));
-}]);
+// Inclui as rotas de depoimentos
+include __DIR__.'/admin/testimonies.php';

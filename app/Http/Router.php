@@ -143,7 +143,8 @@ class Router{
      * Método responsável por retornar os dados da rota atual
      * @return array
      */
-    private function getRoute(){
+    private function getRoute()
+    {
         // URI
         $uri = $this->getUri();
 
