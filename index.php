@@ -16,5 +16,8 @@ include __DIR__.'/routes/pages.php';
 // Inclui as Rotas do painel
 include __DIR__.'/routes/admin.php';
 
+// Inclui as Rotas da API
+include __DIR__.'/routes/api.php';
+
 // Imprime o response da rota
 $obRouter->run()->sendResponse();
