@@ -25,7 +25,7 @@ class Testimony extends Api
 
       $obPagination = new Pagination($quantidadeTotal, $paginaAtual, 10);
 
-      $results = EntityTestimony::getTestimonies(null, 'id ASC', $obPagination->getLimit());
+      $results = EntityTestimony::getTestimonies(null, 'id DESC', $obPagination->getLimit());
 
       while ($obTestimony = $results->fetchObject(EntityTestimony::class)) {
 

@@ -1,0 +1,23 @@
+.btn-custom {
+    background-color: #444;
+    border: 1px solid #222;
+}
+
+.page-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.page-item.active .page-link{
+    background-color: #222;
+    border: 1px solid #222;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.page-link:hover{
+    background-color: #666;
+    border: 1px solid #222;
+    color: #FFF;
+    font-weight: bold;
+}

@@ -12,6 +12,10 @@ class ComposerStaticInit69a5b49ba440ac2e79c791db14f59c3b
             'WilliamCosta\\DotEnv\\' => 20,
             'WilliamCosta\\DatabaseManager\\' => 29,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -27,6 +31,10 @@ class ComposerStaticInit69a5b49ba440ac2e79c791db14f59c3b
         array (
             0 => __DIR__ . '/..' . '/william-costa/database-manager/src',
         ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -41,6 +49,7 @@ class ComposerStaticInit69a5b49ba440ac2e79c791db14f59c3b
         'App\\Controller\\Admin\\Testimony' => __DIR__ . '/../..' . '/app/Controller/Admin/Testimony.php',
         'App\\Controller\\Admin\\User' => __DIR__ . '/../..' . '/app/Controller/Admin/User.php',
         'App\\Controller\\Api\\Api' => __DIR__ . '/../..' . '/app/Controller/Api/Api.php',
+        'App\\Controller\\Api\\Auth' => __DIR__ . '/../..' . '/app/Controller/Api/Auth.php',
         'App\\Controller\\Api\\Testimony' => __DIR__ . '/../..' . '/app/Controller/Api/Testimony.php',
         'App\\Controller\\Api\\User' => __DIR__ . '/../..' . '/app/Controller/Api/User.php',
         'App\\Controller\\Pages\\About' => __DIR__ . '/../..' . '/app/Controller/Pages/About.php',
@@ -48,6 +57,8 @@ class ComposerStaticInit69a5b49ba440ac2e79c791db14f59c3b
         'App\\Controller\\Pages\\Page' => __DIR__ . '/../..' . '/app/Controller/Pages/Page.php',
         'App\\Controller\\Pages\\Testimony' => __DIR__ . '/../..' . '/app/Controller/Pages/Testimony.php',
         'App\\Http\\Middleware\\Api' => __DIR__ . '/../..' . '/app/Http/Middleware/Api.php',
+        'App\\Http\\Middleware\\Cache' => __DIR__ . '/../..' . '/app/Http/Middleware/Cache.php',
+        'App\\Http\\Middleware\\JWTAuth' => __DIR__ . '/../..' . '/app/Http/Middleware/JWTAuth.php',
         'App\\Http\\Middleware\\Maintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/Maintenance.php',
         'App\\Http\\Middleware\\Queue' => __DIR__ . '/../..' . '/app/Http/Middleware/Queue.php',
         'App\\Http\\Middleware\\RequireAdminLogin' => __DIR__ . '/../..' . '/app/Http/Middleware/RequireAdminLogin.php',
@@ -60,8 +71,16 @@ class ComposerStaticInit69a5b49ba440ac2e79c791db14f59c3b
         'App\\Model\\Entity\\Testimony' => __DIR__ . '/../..' . '/app/Model/Entity/Testimony.php',
         'App\\Model\\Entity\\User' => __DIR__ . '/../..' . '/app/Model/Entity/User.php',
         'App\\Session\\Admin\\Login' => __DIR__ . '/../..' . '/app/Session/Admin/Login.php',
+        'App\\Utils\\Cache\\File' => __DIR__ . '/../..' . '/app/Utils/Cache/File.php',
         'App\\Utils\\View' => __DIR__ . '/../..' . '/app/Utils/View.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
+        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
+        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
+        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
+        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
+        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
+        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
         'WilliamCosta\\DatabaseManager\\Database' => __DIR__ . '/..' . '/william-costa/database-manager/src/Database.php',
         'WilliamCosta\\DatabaseManager\\Pagination' => __DIR__ . '/..' . '/william-costa/database-manager/src/Pagination.php',
         'WilliamCosta\\DotEnv\\Environment' => __DIR__ . '/..' . '/william-costa/dot-env/src/Environment.php',
